@@ -1,0 +1,320 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f8f9fa
+}
+
+.flex-container{
+    flex: 1;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+
+    
+    display: flex;
+    flex-flow: column nowrap; /* en columnas y que se adapte segun el tamaño establecido*/
+}
+
+    /*menu */
+    .menu{
+        color:#17202A;
+        background: #D2E0FB;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 140%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        margin: 5%;
+     }
+    
+        
+
+        .logo a:link, a:visited{
+            color:#17202A;
+        }
+
+        .imglogo{
+            margin-left: 44%;
+            order: 0;
+            flex: 1 1 auto;
+            align-self: flex-start;
+
+            
+        }
+            
+        .titulo{
+            margin-left: 40%;
+            order: 0;
+            flex: 1 1 auto;
+            align-self: flex-start;
+
+        }
+
+            #eslogan{
+                margin-left: 6%;
+            }
+
+           
+            
+            
+        
+
+        
+
+    /*mapa navegación */
+
+    #opciones{
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 100px;
+        margin: 100px;
+        border: 1px solid darkblue;
+        border-radius: 5px;
+        
+        
+    }
+
+
+    #opciones a:link,
+    #opciones a:visited {
+        color:#0E6251;
+        text-decoration: none;
+        transition: color 0.3s;
+        
+        }
+
+        #solicitar{
+            margin: 10%;
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            padding: 25px 20px;
+            display: inline-flex;
+            
+        }
+
+        #ver{
+            margin: 10px;
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            padding: 25px 20px;
+            display: inline-flex;
+
+        }
+
+        #opciones a:hover{
+            color:#76D7C4;
+
+        }
+        
+    
+    .footer{
+        background-color: #D2E0FB;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-end;
+        
+    }
+
+    
+
+    .footer a:hover{
+        color: #76D7C4;
+
+    }
+
+    .social{
+        color: #0B5345;
+        font-size: 20px;
+        padding: 10px;
+        letter-spacing: 2px;
+        word-spacing: 7px;
+
+    }
+
+    .social a:visited, a:link{
+        color: #0B5345;
+    }
+
+    .social a:hover{
+        color:#76D7C4;
+    }
+
+
+    /* apartados: formCitas.html  */
+
+
+#formularioCitas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    font-size: 25px;
+    background-color: #EEF5FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+    
+}
+
+#form label {
+    color: #495057;
+}
+
+#formularioCitas h2 {
+    color: #83A2FF;
+}
+
+#submit {
+    background-color: #83A2FF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: #76D7C4;
+}
+
+#reset {
+    background-color: #B4BDFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:hover{
+    background-color: red;
+}
+
+/*MEDIA QUERIES PARA DISEÑO RESPONSIVO */
+
+/* Estilos generales */
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 80%; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .menu {
+        flex-direction: column; /* Cambia la dirección del menú a columna en pantallas más pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .imglogo,
+    .titulo {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas más pequeñas */
+        text-align: center;
+    }
+
+    #opciones {
+        padding: 20px; /* Ajusta el relleno para pantallas más pequeñas */
+        margin: 20px; /* Ajusta el margen para pantallas más pequeñas */
+    }
+
+    #formularioCitas {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* Estilos específicos de Bootstrap */
+
+@media screen and (max-width: 768px) {
+     
+
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    #formularioCitas {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .logo img {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .btn-secondary {
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+   
+
+
+
+
+
+    
+
+    
+
+       
+    
+
+
+
+
